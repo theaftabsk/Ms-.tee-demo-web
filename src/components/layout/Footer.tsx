@@ -264,9 +264,9 @@ export default function Footer() {
         </div>
 
         {/* ================= BOTTOM COPYRIGHT BAR ================= */}
-        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-[11px] sm:text-xs text-gray-400 gap-3">
+        <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left text-[11px] sm:text-xs text-gray-400 gap-3">
           <p>© 2026 EXODUS Teaching with Ms. Tee. All rights reserved.</p>
-          <div className="flex items-center gap-3 text-gray-400">
+          <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 text-gray-400">
             <Link href="#terms" className="hover:text-white transition">
               Terms &amp; Conditions
             </Link>

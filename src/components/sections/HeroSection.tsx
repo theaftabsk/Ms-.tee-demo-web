@@ -21,19 +21,19 @@ export default function HeroSection({ onBookClass, onWatchVideo }: HeroSectionPr
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-4 items-center">
           
           {/* ================= LEFT COLUMN: HERO CONTENT ================= */}
-          <div className="lg:col-span-6 space-y-6 text-left z-20">
+          <div className="lg:col-span-6 space-y-5 sm:space-y-6 text-left z-20">
             
             {/* Top Tag with Yellow Rounded Dash */}
-            <div className="flex items-center gap-3">
-              <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-[0.2em] text-white/95 font-heading">
+            <div className="flex items-center gap-2.5 sm:gap-3 flex-wrap">
+              <span className="text-[11px] sm:text-xs lg:text-[13px] font-extrabold uppercase tracking-wider sm:tracking-[0.2em] text-white/95 font-heading">
                 COSMETOLOGY EDUCATION &amp; TRAINING
               </span>
-              <span className="w-12 h-1.5 bg-[#F9E900] rounded-full inline-block shadow-[0_0_12px_rgba(249,233,0,0.6)]"></span>
+              <span className="w-8 sm:w-12 h-1 sm:h-1.5 bg-[#F9E900] rounded-full inline-block shadow-[0_0_12px_rgba(249,233,0,0.6)]"></span>
             </div>
 
             {/* Main Headline */}
             <div className="space-y-1">
-              <h1 className="text-4xl sm:text-5xl lg:text-[62px] font-black tracking-tight font-heading leading-[1.08] text-white">
+              <h1 className="text-3xl sm:text-5xl lg:text-[60px] font-black tracking-tight font-heading leading-[1.12] sm:leading-[1.08] text-white">
                 Build Your <br />
                 <span className="text-[#F9E900] drop-shadow-[0_4px_25px_rgba(249,233,0,0.4)]">
                   Cosmetology Career
@@ -45,7 +45,7 @@ export default function HeroSection({ onBookClass, onWatchVideo }: HeroSectionPr
                     viewBox="0 0 160 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className="absolute -bottom-2 left-1/3 sm:left-[38%] w-32 sm:w-36 h-6 text-[#D21F2B] pointer-events-none drop-shadow-md"
+                    className="absolute -bottom-2 left-1/4 sm:left-[38%] w-28 sm:w-36 h-5 sm:h-6 text-[#D21F2B] pointer-events-none drop-shadow-md"
                   >
                     <path
                       d="M10 14 C 45 28, 115 28, 150 12"
@@ -59,34 +59,34 @@ export default function HeroSection({ onBookClass, onWatchVideo }: HeroSectionPr
             </div>
 
             {/* Subtitle */}
-            <p className="text-gray-300 text-sm sm:text-base lg:text-[17px] max-w-xl leading-relaxed font-normal pt-1">
+            <p className="text-gray-300 text-xs sm:text-base lg:text-[17px] max-w-xl leading-relaxed font-normal pt-1">
               Hands-on training, State Board preparation, and real-world techniques to help you succeed in the beauty industry.
             </p>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            {/* Action Buttons: Responsive Full Width on Mobile */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 sm:pt-2">
               <Link
                 href="#courses"
-                className="inline-flex items-center gap-2.5 bg-[#F9E900] hover:bg-[#ffe500] text-black font-extrabold px-7 py-3.5 rounded-full text-sm sm:text-base shadow-lg hover:shadow-glow transition transform hover:-translate-y-0.5 cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 bg-[#F9E900] hover:bg-[#ffe500] text-black font-extrabold px-6 sm:px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-base shadow-lg hover:shadow-glow transition transform hover:-translate-y-0.5 cursor-pointer"
               >
-                <GraduationCap className="w-5 h-5 text-black stroke-[2.5]" />
+                <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-black stroke-[2.5]" />
                 <span>Explore Our Courses</span>
-                <ArrowRight className="w-4 h-4 text-black stroke-[2.5]" />
+                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black stroke-[2.5]" />
               </Link>
 
               <button
                 onClick={onWatchVideo}
-                className="inline-flex items-center gap-2.5 bg-[#090C16]/80 hover:bg-white/10 border-2 border-white/50 hover:border-white text-white font-semibold px-6 py-3.5 rounded-full text-sm sm:text-base backdrop-blur-sm transition cursor-pointer"
+                className="inline-flex items-center justify-center gap-2.5 bg-[#090C16]/80 hover:bg-white/10 border-2 border-white/40 hover:border-white text-white font-semibold px-5 sm:px-6 py-3 sm:py-3.5 rounded-full text-xs sm:text-base backdrop-blur-sm transition cursor-pointer"
               >
-                <div className="w-6 h-6 rounded-full border border-white/80 flex items-center justify-center">
-                  <Play className="w-3 h-3 fill-white text-white ml-0.5" />
+                <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border border-white/80 flex items-center justify-center">
+                  <Play className="w-2.5 h-2.5 sm:w-3 sm:h-3 fill-white text-white ml-0.5" />
                 </div>
                 <span>Watch Class Preview</span>
               </button>
             </div>
 
             {/* 4 Feature Cards (Pills) */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 pt-3 sm:pt-6">
               
               {/* Pill 1: Hands-On Training */}
               <div className="flex items-center gap-2.5 bg-[#141226]/85 border border-white/10 rounded-2xl p-2.5 backdrop-blur-sm hover:border-[#F9E900]/40 transition">
@@ -137,15 +137,15 @@ export default function HeroSection({ onBookClass, onWatchVideo }: HeroSectionPr
           </div>
 
           {/* ================= RIGHT COLUMN: MS. TEE CUTOUT VISUAL ================= */}
-          <div className="lg:col-span-6 relative flex items-end justify-center lg:justify-end">
+          <div className="lg:col-span-6 relative flex items-end justify-center lg:justify-end overflow-hidden lg:overflow-visible">
             
-            <div className="relative w-full max-w-[620px] h-[460px] sm:h-[540px] lg:h-[600px] flex items-end justify-center">
+            <div className="relative w-full max-w-[620px] h-[360px] sm:h-[500px] lg:h-[600px] flex items-end justify-center">
               
-              {/* Golden Ring Arc framing Ms. Tee (Exactly like in the mockup) */}
-              <div className="absolute right-12 sm:right-16 top-6 sm:top-4 w-[340px] sm:w-[430px] lg:w-[460px] h-[340px] sm:h-[430px] lg:h-[460px] rounded-full border-[8px] sm:border-[10px] border-[#F9E900] z-0 pointer-events-none opacity-90 shadow-[0_0_35px_rgba(249,233,0,0.35)]"></div>
+              {/* Golden Ring Arc framing Ms. Tee (Responsive on all screens) */}
+              <div className="absolute right-6 sm:right-16 top-4 sm:top-4 w-[260px] sm:w-[400px] lg:w-[460px] h-[260px] sm:h-[400px] lg:h-[460px] rounded-full border-[6px] sm:border-[10px] border-[#F9E900] z-0 pointer-events-none opacity-90 shadow-[0_0_35px_rgba(249,233,0,0.35)]"></div>
 
               {/* Behind Ms. Tee subtle depth radial gradient */}
-              <div className="absolute right-16 top-10 w-[320px] sm:w-[400px] h-[320px] sm:h-[400px] rounded-full bg-gradient-to-tr from-[#1B132C]/70 via-[#10152B]/40 to-transparent z-0 blur-md pointer-events-none"></div>
+              <div className="absolute right-8 sm:right-16 top-6 sm:top-10 w-[240px] sm:w-[380px] h-[240px] sm:h-[380px] rounded-full bg-gradient-to-tr from-[#1B132C]/70 via-[#10152B]/40 to-transparent z-0 blur-md pointer-events-none"></div>
 
               {/* High-Resolution Cutout Photo of Ms. Tee */}
               <div className="relative w-full h-full z-10 flex items-end justify-center">
@@ -155,7 +155,7 @@ export default function HeroSection({ onBookClass, onWatchVideo }: HeroSectionPr
                   width={1312}
                   height={1199}
                   priority
-                  className="w-auto h-full max-h-[580px] object-contain object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.7)]"
+                  className="w-auto h-full max-h-[350px] sm:max-h-[490px] lg:max-h-[580px] object-contain object-bottom drop-shadow-[0_15px_30px_rgba(0,0,0,0.7)]"
                 />
               </div>
 

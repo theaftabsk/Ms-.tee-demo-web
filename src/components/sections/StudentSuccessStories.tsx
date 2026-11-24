@@ -95,7 +95,7 @@ export default function StudentSuccessStories({ onEnroll }: StudentSuccessStorie
           </div>
 
           {/* Main Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight font-heading text-gray-900 leading-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-[44px] font-black tracking-tight font-heading text-gray-900 leading-tight">
             Real Students.{" "}
             <span className="text-[#D21F2B] relative inline-block">
               Real Results.
@@ -118,19 +118,19 @@ export default function StudentSuccessStories({ onEnroll }: StudentSuccessStorie
         </div>
 
         {/* ================= 3 TESTIMONIAL CARDS ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           {testimonials.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-[28px] sm:rounded-[32px] p-5 sm:p-6 border border-gray-100 shadow-card hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
+              className="bg-white rounded-[24px] sm:rounded-[32px] p-4 sm:p-6 border border-gray-100 shadow-card hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
             >
               {/* Top Row: Photo + Rating & Quote */}
               <div className="grid grid-cols-12 gap-3 items-center">
                 
                 {/* Left: Student Photo with Yellow Circle Behind */}
-                <div className="col-span-5 relative w-full h-44 sm:h-48 flex items-end justify-center">
+                <div className="col-span-5 relative w-full h-36 sm:h-48 flex items-end justify-center">
                   {/* Yellow Circle Accent */}
-                  <div className="absolute left-1/2 -translate-x-1/2 bottom-3 w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-[#F9E900] z-0 pointer-events-none shadow-[0_0_25px_rgba(249,233,0,0.4)]"></div>
+                  <div className="absolute left-1/2 -translate-x-1/2 bottom-2 w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-[#F9E900] z-0 pointer-events-none shadow-[0_0_25px_rgba(249,233,0,0.4)]"></div>
 
                   {/* Cutout Photo */}
                   <div className="relative z-10 w-full h-full flex items-end justify-center">
@@ -140,22 +140,22 @@ export default function StudentSuccessStories({ onEnroll }: StudentSuccessStorie
                       width={341}
                       height={367}
                       priority
-                      className="w-auto h-full max-h-[190px] object-contain object-bottom drop-shadow-[0_10px_20px_rgba(0,0,0,0.12)] hover:scale-105 transition-transform duration-500"
+                      className="w-auto h-full max-h-[160px] sm:max-h-[190px] object-contain object-bottom drop-shadow-[0_10px_20px_rgba(0,0,0,0.12)] hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 </div>
 
                 {/* Right: 5 Stars & Quote */}
-                <div className="col-span-7 space-y-2.5">
+                <div className="col-span-7 space-y-2">
                   {/* 5 Gold Stars */}
                   <div className="flex items-center gap-1 text-[#F9E900]">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-current text-[#F9E900]" />
+                      <Star key={i} className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-current text-[#F9E900]" />
                     ))}
                   </div>
 
                   {/* Quote */}
-                  <p className="text-xs sm:text-[13px] text-gray-800 leading-relaxed font-normal">
+                  <p className="text-[11px] sm:text-[13px] text-gray-800 leading-relaxed font-normal">
                     {item.quote}
                   </p>
                 </div>
@@ -163,25 +163,25 @@ export default function StudentSuccessStories({ onEnroll }: StudentSuccessStorie
               </div>
 
               {/* Bottom Profile Bar */}
-              <div className="pt-4 mt-4 border-t border-gray-100 flex items-center justify-between gap-2">
+              <div className="pt-3.5 mt-3.5 border-t border-gray-100 flex items-center justify-between gap-2 flex-wrap">
                 
                 {/* Name & Role with Yellow Icon */}
-                <div className="flex items-center gap-2.5">
-                  <div className="w-9 h-9 rounded-xl bg-[#F9E900] flex items-center justify-center text-black font-bold shrink-0 shadow-sm">
-                    <GraduationCap className="w-5 h-5 stroke-[2.5]" />
+                <div className="flex items-center gap-2 sm:gap-2.5">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-[#F9E900] flex items-center justify-center text-black font-bold shrink-0 shadow-sm">
+                    <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
                   </div>
                   <div>
                     <h4 className="text-xs sm:text-sm font-extrabold text-gray-900 leading-tight">
                       {item.name}
                     </h4>
-                    <p className="text-[10px] sm:text-[11px] text-gray-500 leading-tight">
+                    <p className="text-[9px] sm:text-[11px] text-gray-500 leading-tight">
                       {item.role}
                     </p>
                   </div>
                 </div>
 
                 {/* Light Red Pill Badge */}
-                <div className="inline-flex items-center gap-1 bg-red-50 text-[#D21F2B] border border-red-100/80 rounded-full px-2.5 py-1 text-[10px] sm:text-[11px] font-bold shrink-0">
+                <div className="inline-flex items-center gap-1 bg-red-50 text-[#D21F2B] border border-red-100/80 rounded-full px-2 py-0.5 sm:px-2.5 sm:py-1 text-[9px] sm:text-[11px] font-bold shrink-0">
                   <CheckCircle2 className="w-3 h-3 stroke-[2.5]" />
                   <span>{item.badge}</span>
                 </div>

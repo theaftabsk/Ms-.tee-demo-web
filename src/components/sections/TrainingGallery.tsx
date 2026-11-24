@@ -77,7 +77,7 @@ export default function TrainingGallery({ onViewAll, onJoinNextBatch }: Training
           </div>
 
           {/* Main Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black tracking-tight font-heading text-gray-900 leading-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-[46px] font-black tracking-tight font-heading text-gray-900 leading-tight">
             Real Training. Real Skills.{" "}
             <span className="text-[#D21F2B] relative inline-block">
               Real Results.
@@ -99,8 +99,8 @@ export default function TrainingGallery({ onViewAll, onJoinNextBatch }: Training
           </p>
         </div>
 
-        {/* ================= CATEGORY FILTER TABS ================= */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+        {/* ================= CATEGORY FILTER TABS (SWIPEABLE ON MOBILE) ================= */}
+        <div className="flex overflow-x-auto pb-2 sm:pb-0 no-scrollbar sm:flex-wrap items-center sm:justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 px-1">
           {tabs.map((tab) => {
             const Icon = tab.icon;
             const isActive = activeTab === tab.id;
@@ -108,7 +108,7 @@ export default function TrainingGallery({ onViewAll, onJoinNextBatch }: Training
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`inline-flex items-center gap-1.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-bold transition-all cursor-pointer ${
+                className={`inline-flex items-center gap-1.5 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs font-bold transition-all shrink-0 cursor-pointer ${
                   isActive
                     ? "bg-[#F9E900] text-black shadow-md scale-105"
                     : "bg-white border border-gray-200/80 text-gray-700 hover:border-gray-400 hover:bg-gray-50"
@@ -278,52 +278,52 @@ export default function TrainingGallery({ onViewAll, onJoinNextBatch }: Training
         </div>
 
         {/* ================= FLOATING BOTTOM STATS & CTA BAR ================= */}
-        <div className="mt-12 sm:mt-14">
-          <div className="bg-white rounded-2xl sm:rounded-full border border-gray-100 shadow-xl px-6 sm:px-8 py-3.5 sm:py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-10 sm:mt-14">
+          <div className="bg-white rounded-2xl sm:rounded-full border border-gray-100 shadow-xl px-4 sm:px-8 py-3.5 sm:py-4 flex flex-col md:flex-row items-center justify-between gap-4">
             
             {/* 3 Stats Items */}
-            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-6 sm:gap-8 divide-x divide-gray-100">
+            <div className="grid grid-cols-3 gap-2 sm:gap-6 sm:divide-x divide-gray-100 w-full md:w-auto text-center sm:text-left">
               
               {/* Stat 1 */}
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-[#D21F2B] shrink-0">
-                  <GraduationCap className="w-5 h-5 stroke-[2.5]" />
+              <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-[#D21F2B] shrink-0">
+                  <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
                 </div>
                 <div>
-                  <h4 className="text-base sm:text-lg font-black text-gray-900 leading-tight">100+</h4>
-                  <p className="text-[11px] text-gray-500 leading-tight">Trained Students</p>
+                  <h4 className="text-sm sm:text-lg font-black text-gray-900 leading-tight">100+</h4>
+                  <p className="text-[9px] sm:text-[11px] text-gray-500 leading-tight">Trained Students</p>
                 </div>
               </div>
 
               {/* Stat 2 */}
-              <div className="flex items-center gap-3 pl-6">
-                <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0875BD] shrink-0">
-                  <ImageIcon className="w-5 h-5 stroke-[2.5]" />
+              <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 sm:pl-6">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-[#0875BD] shrink-0">
+                  <ImageIcon className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
                 </div>
                 <div>
-                  <h4 className="text-base sm:text-lg font-black text-gray-900 leading-tight">300+</h4>
-                  <p className="text-[11px] text-gray-500 leading-tight">Student Works</p>
+                  <h4 className="text-sm sm:text-lg font-black text-gray-900 leading-tight">300+</h4>
+                  <p className="text-[9px] sm:text-[11px] text-gray-500 leading-tight">Student Works</p>
                 </div>
               </div>
 
               {/* Stat 3 */}
-              <div className="flex items-center gap-3 pl-6">
-                <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-700 shrink-0">
-                  <Scissors className="w-5 h-5 stroke-[2.5]" />
+              <div className="flex flex-col sm:flex-row items-center gap-1.5 sm:gap-3 sm:pl-6">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-700 shrink-0">
+                  <Scissors className="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.5]" />
                 </div>
                 <div>
-                  <h4 className="text-base sm:text-lg font-black text-gray-900 leading-tight">Multiple</h4>
-                  <p className="text-[11px] text-gray-500 leading-tight">Skill Areas</p>
+                  <h4 className="text-sm sm:text-lg font-black text-gray-900 leading-tight">Multiple</h4>
+                  <p className="text-[9px] sm:text-[11px] text-gray-500 leading-tight">Skill Areas</p>
                 </div>
               </div>
 
             </div>
 
             {/* Right Action Button: Join Our Next Batch */}
-            <div className="shrink-0">
+            <div className="w-full md:w-auto shrink-0">
               <button
                 onClick={onJoinNextBatch}
-                className="inline-flex items-center gap-2 bg-[#0A122A] hover:bg-black text-white font-extrabold px-6 py-3 rounded-full text-xs shadow-md transition transform hover:-translate-y-0.5 cursor-pointer"
+                className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-[#0A122A] hover:bg-black text-white font-extrabold px-6 py-3 rounded-full text-xs shadow-md transition transform hover:-translate-y-0.5 cursor-pointer"
               >
                 <Calendar className="w-4 h-4 text-[#F9E900] stroke-[2.5]" />
                 <span>Join Our Next Batch</span>

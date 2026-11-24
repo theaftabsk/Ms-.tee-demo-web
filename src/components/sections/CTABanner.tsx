@@ -126,30 +126,30 @@ export default function CTABanner({ onBookClass }: CTABannerProps) {
               cosmetology.
             </p>
 
-            {/* 4 Feature Highlights */}
-            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 pt-1 text-xs sm:text-[13px] font-semibold text-gray-200">
-              <div className="flex items-center gap-1.5">
+            {/* 4 Feature Highlights (Clean 2x2 on Mobile, Inline on Desktop) */}
+            <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center gap-3 sm:gap-5 pt-1 text-xs sm:text-[13px] font-semibold text-gray-200 max-w-sm sm:max-w-none mx-auto">
+              <div className="flex items-center gap-1.5 justify-center sm:justify-start">
                 <GraduationCap className="w-4 h-4 text-[#F9E900] shrink-0" />
                 <span>Hands-On Training</span>
               </div>
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 justify-center sm:justify-start">
                 <Award className="w-4 h-4 text-[#D21F2B] shrink-0" />
-                <span>State Board Preparation</span>
+                <span>State Board Prep</span>
               </div>
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 justify-center sm:justify-start">
                 <Users className="w-4 h-4 text-[#0875BD] shrink-0" />
                 <span>Small Class Sizes</span>
               </div>
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1.5 justify-center sm:justify-start">
                 <Headphones className="w-4 h-4 text-[#9333EA] shrink-0" />
                 <span>Ongoing Support</span>
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center justify-center gap-3.5 sm:gap-4 pt-2">
+            {/* Action Buttons: Full Width on Mobile */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 pt-2 max-w-xs sm:max-w-none mx-auto">
               {/* Enroll Now Yellow Button */}
-              <div className="relative group">
+              <div className="relative group w-full sm:w-auto">
                 {/* Decorative yellow sparkles */}
                 <div className="hidden sm:flex absolute -left-5 top-1/2 -translate-y-1/2 flex-col gap-1 pointer-events-none">
                   <span className="w-3 h-0.5 bg-[#F9E900] rounded-full rotate-45"></span>
@@ -159,7 +159,7 @@ export default function CTABanner({ onBookClass }: CTABannerProps) {
 
                 <button
                   onClick={onBookClass}
-                  className="inline-flex items-center gap-2 bg-[#F9E900] hover:bg-[#ffe600] text-black font-black text-xs sm:text-sm px-7 py-3 rounded-full shadow-[0_8px_20px_rgba(249,233,0,0.35)] hover:shadow-[0_12px_28px_rgba(249,233,0,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#F9E900] hover:bg-[#ffe600] text-black font-black text-xs sm:text-sm px-7 py-3 sm:py-3.5 rounded-full shadow-[0_8px_20px_rgba(249,233,0,0.35)] hover:shadow-[0_12px_28px_rgba(249,233,0,0.5)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
                 >
                   <span>Enroll Now</span>
                   <ArrowRight className="w-4 h-4 stroke-[3]" />
@@ -169,7 +169,7 @@ export default function CTABanner({ onBookClass }: CTABannerProps) {
               {/* Request More Info White Button */}
               <button
                 onClick={onBookClass}
-                className="inline-flex items-center gap-2 bg-white hover:bg-gray-100 text-gray-900 font-extrabold text-xs sm:text-sm px-6 py-3 rounded-full shadow-md transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 font-extrabold text-xs sm:text-sm px-6 py-3 sm:py-3.5 rounded-full shadow-md transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
               >
                 <Calendar className="w-4 h-4 text-gray-900" />
                 <span>Request More Info</span>

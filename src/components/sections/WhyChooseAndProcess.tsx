@@ -104,10 +104,10 @@ export default function WhyChooseAndProcess({ onBookClass }: WhyChooseProps) {
           
           {/* Left Column: Ms. Tee Visual - Perfectly Scaled & Fitted */}
           <div className="lg:col-span-5 flex justify-center lg:justify-start">
-            <div className="relative w-full max-w-[380px] sm:max-w-[420px] h-[380px] sm:h-[440px] lg:h-[480px] flex items-end justify-center">
+            <div className="relative w-full max-w-[320px] sm:max-w-[420px] h-[330px] sm:h-[420px] lg:h-[480px] flex items-end justify-center">
               
               {/* Vibrant Yellow Circle Accent Behind Ms. Tee */}
-              <div className="absolute left-1/2 -translate-x-1/2 bottom-10 w-[270px] sm:w-[320px] h-[270px] sm:h-[320px] rounded-full bg-[#F9E900] z-0 pointer-events-none shadow-[0_0_40px_rgba(249,233,0,0.45)]"></div>
+              <div className="absolute left-1/2 -translate-x-1/2 bottom-8 w-[220px] sm:w-[300px] lg:w-[320px] h-[220px] sm:h-[300px] lg:h-[320px] rounded-full bg-[#F9E900] z-0 pointer-events-none shadow-[0_0_40px_rgba(249,233,0,0.45)]"></div>
 
               {/* Clean Transparent HD Cutout of Ms. Tee */}
               <div className="relative z-10 w-full h-full flex items-end justify-center">
@@ -122,11 +122,11 @@ export default function WhyChooseAndProcess({ onBookClass }: WhyChooseProps) {
               </div>
 
               {/* Floating Badge: Meet Ms. Tee */}
-              <div className="absolute bottom-3 left-2 sm:left-4 z-20 bg-white/95 backdrop-blur-md rounded-2xl px-4 py-2 shadow-xl border border-gray-100/90">
+              <div className="absolute bottom-2 left-2 sm:left-4 z-20 bg-white/95 backdrop-blur-md rounded-2xl px-3.5 py-1.5 sm:px-4 sm:py-2 shadow-xl border border-gray-100/90">
                 <h4 className="text-xs sm:text-sm font-extrabold text-gray-900 leading-tight font-heading">
                   Meet Ms. Tee
                 </h4>
-                <p className="text-[10px] sm:text-[11px] text-gray-600 font-medium leading-tight">
+                <p className="text-[9px] sm:text-[11px] text-gray-600 font-medium leading-tight">
                   Licensed Cosmetology Educator
                 </p>
               </div>

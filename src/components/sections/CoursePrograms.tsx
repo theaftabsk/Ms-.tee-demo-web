@@ -104,7 +104,7 @@ export default function CoursePrograms({ onSelectCourse, onBookClass }: CoursePr
           </div>
 
           {/* Main Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-[46px] font-black tracking-tight font-heading text-gray-900 leading-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-[46px] font-black tracking-tight font-heading text-gray-900 leading-tight">
             Our Courses &amp; <span className="text-[#D21F2B]">Training Programs</span>
           </h2>
 
@@ -115,17 +115,17 @@ export default function CoursePrograms({ onSelectCourse, onBookClass }: CoursePr
         </div>
 
         {/* ================= 5 COURSE CARDS ================= */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
           {courses.map((course) => {
             const Icon = course.icon;
             return (
               <div
                 key={course.id}
-                className="bg-white rounded-[28px] p-3.5 border border-gray-100/90 shadow-card hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
+                className="bg-white rounded-[24px] sm:rounded-[28px] p-4 sm:p-3.5 border border-gray-100/90 shadow-card hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   {/* Card Image Area with Top-Left Yellow Accent Frame */}
-                  <div className="relative w-full h-40 rounded-[22px] overflow-hidden bg-gray-50/70 mb-4 p-1">
+                  <div className="relative w-full h-44 sm:h-40 rounded-[20px] sm:rounded-[22px] overflow-hidden bg-gray-50/70 mb-4 p-1">
                     {/* Top-Left Yellow Accent Shape */}
                     <div className="absolute top-0 left-0 w-8 h-8 bg-[#F9E900] z-10 rounded-br-2xl" />
 
@@ -134,7 +134,7 @@ export default function CoursePrograms({ onSelectCourse, onBookClass }: CoursePr
                         src={course.image}
                         alt={course.title}
                         fill
-                        sizes="(max-width: 768px) 100vw, 220px"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 220px"
                         className="object-contain object-center hover:scale-105 transition-transform duration-500"
                       />
                     </div>
@@ -148,7 +148,7 @@ export default function CoursePrograms({ onSelectCourse, onBookClass }: CoursePr
                   </div>
 
                   {/* Title & Description */}
-                  <div className="px-1 space-y-2">
+                  <div className="px-1 space-y-1.5 mb-3">
                     <h3 className="font-extrabold text-gray-900 text-sm sm:text-[15px] leading-snug">
                       {course.title}
                     </h3>
@@ -159,10 +159,13 @@ export default function CoursePrograms({ onSelectCourse, onBookClass }: CoursePr
                 </div>
 
                 {/* Bottom Action Button (Yellow or Dark) */}
-                <div className="pt-4 px-1">
+                <div className="pt-2 px-1">
                   <button
-                    onClick={() => onSelectCourse && onSelectCourse(course.title)}
-                    className={`w-full inline-flex items-center justify-center gap-1.5 py-2.5 rounded-full text-xs font-black transition-all shadow-sm cursor-pointer ${
+                    onClick={() => {
+                      onSelectCourse?.(course.title);
+                      onBookClass?.();
+                    }}
+                    className={`w-full inline-flex items-center justify-center gap-1.5 py-2.5 sm:py-3 rounded-full text-xs font-black transition-all shadow-sm cursor-pointer ${
                       course.btnVariant === "yellow"
                         ? "bg-[#F9E900] hover:bg-[#ffe500] text-black"
                         : "bg-[#0A122A] hover:bg-black text-white"

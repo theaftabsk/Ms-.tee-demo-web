@@ -83,19 +83,19 @@ export default function Home() {
 
       {/* Video Preview Modal */}
       {videoModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
-          <div className="bg-[#0A122A] border border-white/20 rounded-3xl w-full max-w-3xl overflow-hidden shadow-2xl relative">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+          <div className="bg-[#0A122A] border border-white/20 rounded-3xl w-full max-w-3xl overflow-hidden shadow-2xl relative my-auto">
             <button
               onClick={() => setVideoModalOpen(false)}
-              className="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition"
+              className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center transition"
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
-            <div className="p-6">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#F9E900]"></span>
-                <h4 className="text-white font-bold text-lg font-heading">
-                  EXODUS Teaching with Ms. Tee — Class Experience Preview
+            <div className="p-4 sm:p-6">
+              <div className="flex items-center gap-2 mb-3 sm:mb-4 pr-8">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#F9E900] shrink-0"></span>
+                <h4 className="text-white font-bold text-sm sm:text-lg font-heading truncate">
+                  EXODUS Teaching with Ms. Tee — Class Preview
                 </h4>
               </div>
               <div className="relative aspect-video w-full rounded-2xl overflow-hidden bg-black flex items-center justify-center border border-white/10">

@@ -76,48 +76,42 @@ export default function MeetMsTee({ onLearnMore }: MeetMsTeeProps) {
             </p>
 
             {/* 3 Feature Badges in horizontal row */}
-            <div className="flex items-center gap-2 sm:gap-3 pt-3">
+            <div className="grid grid-cols-3 gap-2 pt-3 border-y border-gray-100 py-3 sm:border-0 sm:py-0">
               
               {/* Item 1: Hands-On Training */}
               <div className="flex flex-col items-center text-center">
-                <div className="w-11 h-11 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-[#D21F2B] mb-1.5 shadow-sm">
-                  <Scissors className="w-5 h-5" />
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-[#D21F2B] mb-1 shadow-sm">
+                  <Scissors className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                <span className="text-[11px] font-bold text-gray-900 leading-tight">Hands-On</span>
-                <span className="text-[10px] text-gray-500 leading-tight">Training</span>
+                <span className="text-[10px] sm:text-[11px] font-bold text-gray-900 leading-tight">Hands-On</span>
+                <span className="text-[9px] sm:text-[10px] text-gray-500 leading-tight">Training</span>
               </div>
-
-              {/* Vertical Divider */}
-              <div className="h-8 w-[1px] bg-gray-200"></div>
 
               {/* Item 2: State Board Preparation */}
-              <div className="flex flex-col items-center text-center">
-                <div className="w-11 h-11 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center text-[#3B1259] mb-1.5 shadow-sm">
-                  <GraduationCap className="w-5 h-5" />
+              <div className="flex flex-col items-center text-center border-x border-gray-100 sm:border-0 px-1">
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center text-[#3B1259] mb-1 shadow-sm">
+                  <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                <span className="text-[11px] font-bold text-gray-900 leading-tight">State Board</span>
-                <span className="text-[10px] text-gray-500 leading-tight">Preparation</span>
+                <span className="text-[10px] sm:text-[11px] font-bold text-gray-900 leading-tight">State Board</span>
+                <span className="text-[9px] sm:text-[10px] text-gray-500 leading-tight">Preparation</span>
               </div>
-
-              {/* Vertical Divider */}
-              <div className="h-8 w-[1px] bg-gray-200"></div>
 
               {/* Item 3: Career Development */}
               <div className="flex flex-col items-center text-center">
-                <div className="w-11 h-11 rounded-xl bg-rose-50 border border-rose-100 flex items-center justify-center text-[#D21F2B] mb-1.5 shadow-sm">
-                  <Award className="w-5 h-5" />
+                <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-rose-50 border border-rose-100 flex items-center justify-center text-[#D21F2B] mb-1 shadow-sm">
+                  <Award className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
-                <span className="text-[11px] font-bold text-gray-900 leading-tight">Career</span>
-                <span className="text-[10px] text-gray-500 leading-tight">Development</span>
+                <span className="text-[10px] sm:text-[11px] font-bold text-gray-900 leading-tight">Career</span>
+                <span className="text-[9px] sm:text-[10px] text-gray-500 leading-tight">Development</span>
               </div>
 
             </div>
 
             {/* Action Button */}
-            <div className="pt-4">
+            <div className="pt-3 sm:pt-4">
               <button
                 onClick={onLearnMore}
-                className="inline-flex items-center gap-2 bg-[#F9E900] hover:bg-[#ffe500] text-black font-extrabold px-6 py-3 rounded-full text-xs sm:text-sm shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#F9E900] hover:bg-[#ffe500] text-black font-extrabold px-6 py-3 rounded-full text-xs sm:text-sm shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 cursor-pointer"
               >
                 <span>Learn More About EXODUS</span>
                 <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -128,13 +122,13 @@ export default function MeetMsTee({ onLearnMore }: MeetMsTeeProps) {
 
           {/* ================= CENTER COLUMN: MS. TEE STUDIO PORTRAIT ================= */}
           <div className="lg:col-span-4 flex justify-center">
-            <div className="relative w-full max-w-[340px]">
+            <div className="relative w-full max-w-[290px] sm:max-w-[340px]">
               
               {/* Yellow Top-Left Curved Accent behind the photo */}
-              <div className="absolute -top-3.5 -left-3.5 w-32 h-32 bg-[#F9E900] rounded-tl-[44px] rounded-br-2xl z-0 shadow-sm" />
+              <div className="absolute -top-3 -left-3 w-28 sm:w-32 h-28 sm:h-32 bg-[#F9E900] rounded-tl-[36px] sm:rounded-tl-[44px] rounded-br-2xl z-0 shadow-sm" />
 
               {/* Blue & Red Bottom-Right Curved Accent */}
-              <div className="absolute -bottom-2 -right-2 w-36 h-20 pointer-events-none z-20 overflow-hidden">
+              <div className="absolute -bottom-2 -right-2 w-32 sm:w-36 h-16 sm:h-20 pointer-events-none z-20 overflow-hidden">
                 <svg viewBox="0 0 150 70" fill="none" className="w-full h-full">
                   <path d="M 0 70 C 40 68, 80 50, 150 20 L 150 50 C 90 65, 50 70, 0 70 Z" fill="#0875BD" />
                   <path d="M 0 70 C 50 69, 90 58, 150 45 L 150 70 L 0 70 Z" fill="#D21F2B" />
@@ -142,7 +136,7 @@ export default function MeetMsTee({ onLearnMore }: MeetMsTeeProps) {
               </div>
 
               {/* The High-Resolution Studio Portrait Card */}
-              <div className="relative z-10 w-full h-[410px] sm:h-[440px] rounded-[36px] overflow-hidden shadow-2xl bg-black border-4 border-white">
+              <div className="relative z-10 w-full h-[360px] sm:h-[440px] rounded-[30px] sm:rounded-[36px] overflow-hidden shadow-2xl bg-black border-4 border-white">
                 <Image
                   src="/images/ms-tee-portrait-studio.jpg"
                   alt="Ms. Tee - Cosmetology Educator & Mentor"

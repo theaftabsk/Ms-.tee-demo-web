@@ -32,19 +32,19 @@ export default function BookingModal({ isOpen, onClose, defaultCourse = "Fundame
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200">
-      <div className="bg-[#0D1836] border border-white/15 rounded-3xl w-full max-w-lg overflow-hidden shadow-2xl relative text-white">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200 overflow-y-auto">
+      <div className="bg-[#0D1836] border border-white/15 rounded-3xl w-full max-w-lg max-h-[92vh] overflow-y-auto no-scrollbar shadow-2xl relative text-white my-auto">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-gray-300 hover:text-white transition"
+          className="absolute top-4 right-4 sm:top-5 sm:right-5 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-gray-300 hover:text-white transition z-10"
         >
           <X className="w-4 h-4" />
         </button>
 
         {/* Content */}
-        <div className="p-6 sm:p-8">
+        <div className="p-5 sm:p-8">
           {submitted ? (
             <div className="py-8 text-center space-y-4">
               <div className="w-16 h-16 rounded-full bg-[#F9E900] text-black mx-auto flex items-center justify-center shadow-lg">
